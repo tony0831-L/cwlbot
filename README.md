@@ -21,14 +21,14 @@ const res=new Schema({
 {
     "name":"老八食堂",
     "add":"XX街xx號",
-    "img":"https://i.imgur.com/LrMama2.jpg",
+    "img":"https://cdn.discordapp.com/attachments/476745393032658944/921718285333069864/0bd882957e79dbde.jpg",
     "cat":"美式餐廳",
     "star":1,
     "menu":[
         {
             "name":"小漢堡",
             "price":"128",
-            "img":"https://i.imgur.com/5AT0wYn.jpg"
+            "img":"https://cdn.discordapp.com/attachments/476745393032658944/921718701944893480/29185a41eaa72dda1c52947e713bb55397c5d923.jpg"
         }
     ]
 }

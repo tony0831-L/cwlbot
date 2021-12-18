@@ -22,8 +22,14 @@ router.get('/test',(req,res) => {
 })
 
 router.post('/addRes',(req,res)=>{
-    console.log(req.body)
-    res.end()
+    let data = req.body;
+    resModel.restaurants.create(data,err=>{
+        if(!err){
+            res.send(true);
+        }else{
+            res.send(false);
+        }
+    });
 })
 
 module.exports = router;
