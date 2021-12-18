@@ -41,4 +41,14 @@ router.post('/delRes',(req,res)=>{
         }
     });
 })
+
+router.post('/editRes',(req,res)=>{
+    resModel.restaurants.findByIdAndUpdate(req.body.id,req.body.data,(err,docs)=>{
+        if(!err){
+            res.send("修改成功! 現在資料:"+docs);
+        }else{
+            res.send(false)
+        }
+    })
+})
 module.exports = router;
