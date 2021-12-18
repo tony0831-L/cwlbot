@@ -11,4 +11,9 @@ router.get('/',(req,res)=>{
     res.end()
 })
 
+router.post('/addUser',(req,res)=>{
+    let data = req.body;
+    console.log(data)
+})
+
 module.exports = router;
