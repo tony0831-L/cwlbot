@@ -32,4 +32,13 @@ router.post('/addRes',(req,res)=>{
     });
 })
 
+router.post('/delRes',(req,res)=>{
+    resModel.restaurants.findByIdAndDelete(req.body.id,err=>{
+        if(!err){
+            res.send(true);
+        }else{
+            res.send(false);
+        }
+    });
+})
 module.exports = router;

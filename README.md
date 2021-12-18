@@ -9,6 +9,7 @@
 ### 上傳格式
 
 ```javascript
+//格式Schema
 const res=new Schema({
     name:String,
     add:String,
@@ -17,7 +18,8 @@ const res=new Schema({
     star:Number,
     menu:Array,
 })
-範例:
+
+//範例:
 {
     "name":"老八食堂",
     "add":"XX街xx號",
@@ -35,4 +37,15 @@ const res=new Schema({
 ```
 
 
+
+## 刪除資料(post):https://cwslbot.herokuapp.com/res/delRes
+
+### 上傳格式
+
+```
+//範例:
+{
+	"id":"61bdba7a7d93cc8a5e2d15dc"
+}
+```
 
