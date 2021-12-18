@@ -75,7 +75,7 @@ const res=new Schema({
 
 ### 上傳格式
 
-```
+```javascript
 //範例:
 {
     "id":"61bdba7a7d93cc8a5e2d15dc"
@@ -103,7 +103,7 @@ const res=new Schema({
 
 ### 上傳格式
 
-```
+```javascript
 //範例:
 {
 	"id":"61bdba7a7d93cc8a5e2d15dc"
@@ -113,3 +113,22 @@ const res=new Schema({
 
 
 ## 上傳用戶資料(post):https://cwslbot.herokuapp.com/res/addRes
+
+### 上傳格式
+
+```javascript
+//格式Schema
+const users=new Schema({
+    name:String,
+    pass:String,
+    img:String,
+    history:Array
+})
+//範例:
+{
+	"name":"admin",
+    "pass":"password",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/215px-Vue.js_Logo_2.svg.png",
+}
+```
+

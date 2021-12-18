@@ -5,7 +5,12 @@ const users=new Schema({
     name:String,
     pass:String,
     img:String,
-    history:Array
+})
+
+const history = new Schema({
+    resta:String,
+    user:String,
+    dishes:Array
 })
 
 module.exports.users =mongoose.model("users",users);
