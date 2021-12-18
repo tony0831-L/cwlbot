@@ -18,6 +18,7 @@
 [
     {
         "_id":"61bdba7a7d93cc8a5e2d15dc",
+        "owner":"admin",
         "name":"老八食堂",
         "add":"XX街xx號",
         "img":"https://cdn.discordapp.com/attachments/476745393032658944/921718285333069864/0bd882957e79dbde.jpg",
@@ -54,6 +55,7 @@ const res=new Schema({
 
 //範例:
 {
+    "owner":"admin",
     "name":"老八食堂",
     "add":"XX街xx號",
     "img":"https://cdn.discordapp.com/attachments/476745393032658944/921718285333069864/0bd882957e79dbde.jpg",
@@ -78,6 +80,7 @@ const res=new Schema({
 {
     "id":"61bdba7a7d93cc8a5e2d15dc"
     "data":{
+    	"owner":"admin",
         "name":"你媽食堂",
         "add":"XX街xx號",
         "img":"https://cdn.discordapp.com/attachments/476745393032658944/921718285333069864/0bd882957e79dbde.jpg",
@@ -107,3 +110,6 @@ const res=new Schema({
 }
 ```
 
+
+
+## 上傳用戶資料(post):https://cwslbot.herokuapp.com/res/addRes

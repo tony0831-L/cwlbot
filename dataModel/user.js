@@ -8,4 +8,4 @@ const users=new Schema({
     history:Array
 })
 
-module.exports.restaurants =mongoose.model("users",users);
+module.exports.users =mongoose.model("users",users);
