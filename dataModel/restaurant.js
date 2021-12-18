@@ -10,4 +10,4 @@ const res=new Schema({
     menu:Array,
 })
 
-module.exports.restaurants =mongoose.model("wm",res);
+module.exports.restaurants =mongoose.model("restaurants",res);

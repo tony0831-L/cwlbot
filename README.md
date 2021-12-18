@@ -10,7 +10,7 @@
 
 
 
-## 取得資料(get):https://cwslbot.herokuapp.com/res/test
+## 取得餐廳資料(get):https://cwslbot.herokuapp.com/res/test
 
 ### 資料格式:
 
@@ -37,7 +37,7 @@
 
 
 
-## 上傳資料(post):https://cwslbot.herokuapp.com/res/addRes
+## 上傳餐廳資料(post):https://cwslbot.herokuapp.com/res/addRes
 
 ### 上傳格式
 
@@ -69,7 +69,7 @@ const res=new Schema({
 }
 ```
 
-## 修改資料(post):https://cwslbot.herokuapp.com/res/editRes
+## 修改餐廳資料(post):https://cwslbot.herokuapp.com/res/editRes
 
 ### 上傳格式
 
@@ -96,7 +96,7 @@ const res=new Schema({
 
 
 
-## 刪除資料(post):https://cwslbot.herokuapp.com/res/delRes
+## 刪除餐廳資料(post):https://cwslbot.herokuapp.com/res/delRes
 
 ### 上傳格式
 
