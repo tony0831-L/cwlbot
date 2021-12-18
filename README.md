@@ -19,16 +19,16 @@ const res=new Schema({
 })
 範例:
 {
-    name:"老八食堂",
-    add:"XX街xx號",
-    img:"https://i.imgur.com/LrMama2.jpg",
-    cat:"美式餐廳",
-    star:1,
-    menu:[
+    "name":"老八食堂",
+    "add":"XX街xx號",
+    "img":"https://i.imgur.com/LrMama2.jpg",
+    "cat":"美式餐廳",
+    "star":1,
+    "menu":[
         {
-            name:"小漢堡",
-            price:"128",
-            img:"https://i.imgur.com/5AT0wYn.jpg"
+            "name":"小漢堡",
+            "price":"128",
+            "img":"https://i.imgur.com/5AT0wYn.jpg"
         }
     ]
 }
