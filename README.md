@@ -15,7 +15,7 @@ const res=new Schema({
     img:String,
     cat:String,
     star:Number,
-    menu:Object,
+    menu:Array,
 })
 範例:
 {
