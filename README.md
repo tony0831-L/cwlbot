@@ -112,7 +112,7 @@ const res=new Schema({
 
 
 
-## 上傳用戶資料(post):https://cwslbot.herokuapp.com/res/addRes
+## 用戶註冊(post):https://cwslbot.herokuapp.com/res/regi
 
 ### 上傳格式
 

@@ -10,7 +10,7 @@ router.get('/',(req,res)=>{
     })
 })
 
-router.post('/addUser',(req,res)=>{
+router.post('/regi',(req,res)=>{
     userModel.users.create(req.body,err=>{
         if(!err){
             res.send(true);
