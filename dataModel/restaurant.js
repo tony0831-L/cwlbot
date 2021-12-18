@@ -7,7 +7,7 @@ const res=new Schema({
     img:String,
     cat:String,
     star:Number,
-    menu:Object,
+    menu:Array,
 })
 
 module.exports.restaurants =mongoose.model("wm",res);
