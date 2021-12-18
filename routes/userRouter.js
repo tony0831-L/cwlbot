@@ -5,15 +5,19 @@ const userModel = require('../dataModel/user')
 router.get('/',(req,res)=>{
     userModel.users.find({},(err,docs)=>{
         if(!err){
-            console.log(docs)
+            res.send(docs);
         }
     })
-    res.end()
 })
 
 router.post('/addUser',(req,res)=>{
-    let data = req.body;
-    console.log(data)
+    userModel.users.create(req.body,err=>{
+        if(!err){
+            res.send(true);
+        }else{
+            res.send(false);
+        }
+    });
 })
 
 module.exports = router;
