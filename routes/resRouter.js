@@ -22,7 +22,7 @@ router.get('/test',(req,res) => {
 })
 
 router.post('/addRes',(req,res)=>{
-    console.log(req)
+    console.log(req.body)
     res.end()
 })
 

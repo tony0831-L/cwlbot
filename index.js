@@ -7,6 +7,7 @@ const url = "mongodb+srv://tony0831:tony0831Tony09@cluster0.kf3ih.mongodb.net/cw
 const resRouter = require('./routes/resRouter')
 
 const app=express();
+app.use(express.json());
 app.use(cors());
 app.use('/res',resRouter);
 
