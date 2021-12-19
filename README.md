@@ -10,7 +10,7 @@
 
 
 
-## 取得餐廳資料(get):https://cwslbot.herokuapp.com/res/test
+## 取得所有餐廳資料(get):https://cwslbot.herokuapp.com/res/test
 
 ### 資料格式:
 
@@ -34,6 +34,18 @@
         "__v":0
     }
 ]
+```
+
+
+
+## 取得所有餐廳資料(put):https://cwslbot.herokuapp.com/res/findResByName
+
+### 上傳格式
+
+```javascript
+{
+    "name":"admin"
+}
 ```
 
 
@@ -71,7 +83,7 @@ const res=new Schema({
 }
 ```
 
-## 修改餐廳資料(post):https://cwslbot.herokuapp.com/res/editRes
+## 修改餐廳資料(put):https://cwslbot.herokuapp.com/res/editRes
 
 ### 上傳格式
 

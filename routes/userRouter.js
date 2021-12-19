@@ -1,7 +1,6 @@
 const express =require('express');
 const router =express.Router();
 const userModel = require('../dataModel/user')
-const resModel = require('../dataModel/restaurant.js')
 
 async function checkRepeat(name){
     let num ; 
@@ -88,23 +87,21 @@ router.post('/sign',(req,res)=>{
     });
 })
 
-router.delete('/del')
-router.post('/findResByName',(req,res)=>{
-    resModel.restaurants.find({owner:req.body.name},(err,docs)=>{
+router.put('/del',(req,res)=>{
+    userModel.users.findOneAndDelete({name:req.body.name},(err,docs)=>{
         if(!err){
             res.send({
                 stat:true,
                 data:docs,
-                message:"查詢成功"
-            });
+                message:"刪除成功"
+            })
         }else{
             res.send({
                 stat:false,
-                data:"error",
                 message:"伺服器錯誤,請聯繫技術人員"
-            });
+            }); 
         }
-    });
+    })
 })
 
 module.exports = router;

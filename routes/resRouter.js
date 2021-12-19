@@ -42,7 +42,7 @@ router.delete('/delRes',(req,res)=>{
     });
 })
 
-router.post('/editRes',(req,res)=>{
+router.put('/editRes',(req,res)=>{
     resModel.restaurants.findByIdAndUpdate(req.body.id,req.body.data,(err,docs)=>{
         if(!err){
             res.send("修改成功! 現在資料:"+docs);
@@ -50,6 +50,24 @@ router.post('/editRes',(req,res)=>{
             res.send(false)
         }
     })
+})
+
+router.put('/findResByName',(req,res)=>{
+    resModel.restaurants.find({owner:req.body.name},(err,docs)=>{
+        if(!err){
+            res.send({
+                stat:true,
+                data:docs,
+                message:"查詢成功"
+            });
+        }else{
+            res.send({
+                stat:false,
+                data:"error",
+                message:"伺服器錯誤,請聯繫技術人員"
+            });
+        }
+    });
 })
 
 module.exports = router;
