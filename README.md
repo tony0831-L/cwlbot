@@ -10,6 +10,8 @@
 
 ### 	3.其餘值請自行填入,為保證頁面完整性請不要填入空值,竟可能在前台阻擋用戶輸入空值。
 
+### 4.使用範例:https://github.com/tony0831-L/cwlbot/blob/master/example.html
+
 
 
 ## 取得所有餐廳資料(get):https://cwslbot.herokuapp.com/res/test
