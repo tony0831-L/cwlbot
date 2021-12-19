@@ -124,7 +124,7 @@ const res=new Schema({
 
 
 
-## 取得所有餐廳資料(get):https://cwslbot.herokuapp.com/user/test
+## 取得所有用戶資料(get):https://cwslbot.herokuapp.com/user/test
 
 ### 資料格式:
 
