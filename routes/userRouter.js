@@ -13,7 +13,7 @@ async function checkRepeat(name){
     
 }
 
-router.get('/',(req,res)=>{
+router.get('/test',(req,res)=>{
     userModel.users.find({},(err,docs)=>{
         if(!err){
             res.send(docs);
