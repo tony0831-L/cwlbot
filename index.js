@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const resModel = require('./dataModel/restaurant');
 
 const url = "mongodb+srv://tony0831:tony0831Tony09@cluster0.kf3ih.mongodb.net/cwl-wm?retryWrites=true&w=majority";
 const resRouter = require('./routes/resRouter')
