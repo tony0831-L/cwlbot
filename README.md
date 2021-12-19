@@ -124,7 +124,25 @@ const res=new Schema({
 
 
 
-## 用戶註冊(post):https://cwslbot.herokuapp.com/res/regi
+## 取得所有餐廳資料(get):https://cwslbot.herokuapp.com/user/test
+
+### 資料格式:
+
+```javascript
+[
+    {
+        "_id":"61bde33627bb0155c33a8860",
+        "name":"admin",
+        "pass":"password",
+        "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/215px-Vue.js_Logo_2.svg.png",
+        "__v":0
+    }
+]
+```
+
+
+
+## 用戶註冊(post):https://cwslbot.herokuapp.com/user/regi
 
 ### 上傳格式
 
@@ -133,14 +151,58 @@ const res=new Schema({
 const users=new Schema({
     name:String,
     pass:String,
-    img:String,
-    history:Array
+    img:String
 })
 //範例:
 {
 	"name":"admin",
     "pass":"password",
     "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/215px-Vue.js_Logo_2.svg.png",
+}
+```
+
+
+
+## 用戶登入(post):https://cwslbot.herokuapp.com/user/sign
+
+### 上傳格式
+
+```javascript
+//範例:
+{
+	"name":"admin",
+    "pass":"password",
+}
+```
+
+
+
+## 刪除用戶(delete):https://cwslbot.herokuapp.com/user/del
+
+### 上傳格式
+
+```javascript
+//範例:
+{
+    "name":"admin",
+}
+```
+
+
+
+## 修改用戶資料(put):https://cwslbot.herokuapp.com/user/editRes
+
+### 上傳格式
+
+```javascript
+//範例:
+{
+    "name":"admin"
+    "data":{
+        "name":"admin1",
+        "pass":"password",
+        "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/215px-Vue.js_Logo_2.svg.png",
+	}
 }
 ```
 
