@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('https://cwslbot.herokuapp.com/res/test')
+            .then( (response) => console.log(response))
+            .catch( (error) => console.log(error))
+        
+        // axios.post('https://cwslbot.herokuapp.com/res/addRes',{
+        //     "owner":"CWL",
+        //     "name":"爆哥拌飯",
+        //     "add":"北新路58號",
+        //     "img":"https://cdn.discordapp.com/attachments/643047433407823888/922059220105445396/9k.png",
+        //     "cat":"印度餐廳",
+        //     "star":5,
+        //     "menu":[
+        //     {
+        //     "name":"爆哥經典拌飯",
+        //     "price":"99",
+        //     "img":"https://cdn.discordapp.com/attachments/643047433407823888/922060111466364938/unknown.png"
+        //     }
+        //     ]
+        // })
+        // .then( (response) => console.log(response))
+        // .catch( (error) => console.log(error))
+
+        // axios.delete("https://cwslbot.herokuapp.com/res/delRes", {
+        //     headers: {
+        //         Authorization: "***" 
+        //     },
+        //     data: {
+        //         "id":"61befe1f53b9604165638e5d"
+        //     }
+        // }).then( (response) => console.log(response.data)).catch( (error) => console.log(error))
+
+        // axios.put('https://cwslbot.herokuapp.com/res/editRes',{
+        //     "id":"61befe2253b9604165638e61",
+        //     "data":{
+        //         "owner":"LWR",
+        //         "name":"爆哥拌飯",
+        //         "add":"北新路58號",
+        //         "img":"https://cdn.discordapp.com/attachments/643047433407823888/922059220105445396/9k.png",
+        //         "cat":"印度餐廳",
+        //         "star":5,
+        //         "menu":[
+        //         {
+        //         "name":"爆哥經典拌飯",
+        //         "price":"99",
+        //         "img":"https://cdn.discordapp.com/attachments/643047433407823888/922060111466364938/unknown.png"
+        //         }
+        //         ]
+        //     }
+        // })
+        // .then( (response) => console.log(response))
+        // .catch( (error) => console.log(error))
+
+        // axios.post('https://cwslbot.herokuapp.com/user/regi',{
+        //     "name":"CWL",
+        //     "pass":"123456",
+        //     "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/215px-Vue.js_Logo_2.svg.png",
+        // })
+        // .then( (response) => console.log(response))
+        // .catch( (error) => console.log(error))
+
+        // axios.post('https://cwslbot.herokuapp.com/user/sign',{
+        //     "name":"LWR",
+        //     "pass":"123456",
+        // })
+        // .then( (response) => console.log(response))
+        // .catch( (error) => console.log(error))
+        
+        axios.put('https://cwslbot.herokuapp.com/user/edit',{
+            "name":"LWR",
+            "data":{
+                "name":"CWL",
+                "pass":"123456789",
+                "img":"https://cdn.discordapp.com/attachments/639611642945994772/922061054442352640/267214691_411988757337283_8397226962135184915_n.png",
+            }
+        })
+        .then( (response) => console.log(response))
+        .catch( (error) => console.log(error))
+    </script>
+</body>
+</html>
