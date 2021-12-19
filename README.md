@@ -190,7 +190,7 @@ const users=new Schema({
 
 
 
-## 修改用戶資料(put):https://cwslbot.herokuapp.com/user/editRes
+## 修改用戶資料(put):https://cwslbot.herokuapp.com/user/edit
 
 ### 上傳格式
 
