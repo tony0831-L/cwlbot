@@ -53,7 +53,7 @@ router.put('/editRes',(req,res)=>{
 })
 
 router.put('/findResByName',(req,res)=>{
-    resModel.restaurants.find({owner:req.body.name},(err,docs)=>{
+    resModel.restaurants.find({owner:req.body.owner},(err,docs)=>{
         if(!err){
             res.send({
                 stat:true,

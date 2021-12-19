@@ -44,7 +44,7 @@
 
 ```javascript
 {
-    "name":"admin"
+    "owner":"admin"
 }
 ```
 
