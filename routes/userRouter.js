@@ -87,7 +87,7 @@ router.post('/sign',(req,res)=>{
     });
 })
 
-router.put('/del',(req,res)=>{
+router.delete('/del',(req,res)=>{
     userModel.users.findOneAndDelete({name:req.body.name},(err,docs)=>{
         if(!err){
             res.send({
