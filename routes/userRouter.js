@@ -49,7 +49,7 @@ router.post('/regi',(req,res)=>{
             res.send({
                 num:"err",
                 build:stat,
-                message:"操作過於頻繁,請稍後在試"
+                message:"操作過於頻繁,請稍後在試,如重複出現請通知技術人員"
             })
         }
     }
@@ -59,23 +59,50 @@ router.post('/regi',(req,res)=>{
 router.post('/sign',(req,res)=>{
     userModel.users.find({name:req.body.name},(err,docs)=>{
         if(!err){
-            docs.forEach(el=>{
-                if (el.pass==req.body.pass) {
-                    res.send(true);
-                }
-            })
+            if(docs.length){
+                docs.forEach(el=>{
+                    if (el.pass==req.body.pass) {
+                        res.send({
+                            stat:true,
+                            message:"登入成功"
+                        });
+                    }else{
+                        res.send({
+                            stat:false,
+                            message:"密碼錯誤"
+                        }); 
+                    }
+                })
+            }else{
+                res.send({
+                    stat:false,
+                    message:"帳號不存在,請先完成註冊"
+                });  
+            }
         }else{
-            res.send(false);
+            res.send({
+                stat:false,
+                message:"伺服器錯誤,請聯繫技術人員"
+            }); 
         }
     });
 })
 
+router.delete('/del')
 router.post('/findResByName',(req,res)=>{
     resModel.restaurants.find({owner:req.body.name},(err,docs)=>{
         if(!err){
-            res.send(docs);
+            res.send({
+                stat:true,
+                data:docs,
+                message:"查詢成功"
+            });
         }else{
-            res.send(false);
+            res.send({
+                stat:false,
+                data:"error",
+                message:"伺服器錯誤,請聯繫技術人員"
+            });
         }
     });
 })

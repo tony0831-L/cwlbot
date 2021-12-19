@@ -99,7 +99,7 @@ const res=new Schema({
 
 
 
-## 刪除餐廳資料(post):https://cwslbot.herokuapp.com/res/delRes
+## 刪除餐廳資料(delete):https://cwslbot.herokuapp.com/res/delRes
 
 ### 上傳格式
 

@@ -32,7 +32,7 @@ router.post('/addRes',(req,res)=>{
     });
 })
 
-router.post('/delRes',(req,res)=>{
+router.delete('/delRes',(req,res)=>{
     resModel.restaurants.findByIdAndDelete(req.body.id,err=>{
         if(!err){
             res.send(true);
