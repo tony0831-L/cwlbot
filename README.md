@@ -1,3 +1,5 @@
+
+
 # 偉倫外賣後端:
 
 ## 欄位說明:
@@ -36,9 +38,17 @@
 ]
 ```
 
+### 範例:
+
+```javascript
+axios.get('https://cwslbot.herokuapp.com/res/test')
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
+```
 
 
-## 取得所有餐廳資料(put):https://cwslbot.herokuapp.com/res/findResByName
+
+## 取得特定餐廳資料(put):https://cwslbot.herokuapp.com/res/findResByName
 
 ### 上傳格式
 
@@ -46,6 +56,16 @@
 {
     "owner":"admin"
 }
+```
+
+### 範例:
+
+```javascript
+axios.put('https://cwslbot.herokuapp.com/res/editRes',{
+    "owner":"admin"
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
 ```
 
 
@@ -83,6 +103,30 @@ const res=new Schema({
 }
 ```
 
+### 範例:
+
+```javascript
+axios.post('https://cwslbot.herokuapp.com/res/addRes',{
+    "owner":"CWL",
+    "name":"爆哥拌飯",
+    "add":"北新路58號",
+    "img":"https://cdn.discordapp.com/attachments/643047433407823888/922059220105445396/9k.png",
+    "cat":"印度餐廳",
+    "star":5,
+    "menu":[
+        {
+            "name":"爆哥經典拌飯",
+            "price":"99",
+            "img":"https://cdn.discordapp.com/attachments/643047433407823888/922060111466364938/unknown.png"
+        }
+    ]
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
+```
+
+
+
 ## 修改餐廳資料(put):https://cwslbot.herokuapp.com/res/editRes
 
 ### 上傳格式
@@ -109,6 +153,31 @@ const res=new Schema({
 }
 ```
 
+### 範例:
+
+```javascript
+axios.put('https://cwslbot.herokuapp.com/res/editRes',{
+    "id":"61befe2253b9604165638e61",
+    "data":{
+        "owner":"LWR",
+        "name":"爆哥拌飯",
+        "add":"北新路58號",
+        "img":"https://cdn.discordapp.com/attachments/643047433407823888/922059220105445396/9k.png",
+        "cat":"印度餐廳",
+        "star":5,
+        "menu":[
+            {
+                "name":"爆哥經典拌飯",
+                "price":"99",
+                "img":"https://cdn.discordapp.com/attachments/643047433407823888/922060111466364938/unknown.png"
+            }
+        ]
+    }
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
+```
+
 
 
 ## 刪除餐廳資料(delete):https://cwslbot.herokuapp.com/res/delRes
@@ -120,6 +189,19 @@ const res=new Schema({
 {
 	"id":"61bdba7a7d93cc8a5e2d15dc"
 }
+```
+
+### 範例:
+
+```javascript
+axios.delete("https://cwslbot.herokuapp.com/res/delRes", {
+    headers: {
+        Authorization: "***" 
+    },
+    data: {
+        "id":"61befe1f53b9604165638e5d"
+    }
+}).then( (response) => console.log(response.data)).catch( (error) => console.log(error))
 ```
 
 
@@ -138,6 +220,14 @@ const res=new Schema({
         "__v":0
     }
 ]
+```
+
+### 範例:
+
+```javascript
+axios.get('https://cwslbot.herokuapp.com/user/test')
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
 ```
 
 
@@ -161,6 +251,18 @@ const users=new Schema({
 }
 ```
 
+### 範例:
+
+```javascript
+axios.post('https://cwslbot.herokuapp.com/user/regi',{
+    "name":"CWL",
+    "pass":"123456",
+    "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/215px-Vue.js_Logo_2.svg.png",
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
+```
+
 
 
 ## 用戶登入(post):https://cwslbot.herokuapp.com/user/sign
@@ -175,6 +277,17 @@ const users=new Schema({
 }
 ```
 
+### 範例:
+
+```javascript
+axios.post('https://cwslbot.herokuapp.com/user/sign',{
+    "name":"LWR",
+    "pass":"123456"
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
+```
+
 
 
 ## 刪除用戶(delete):https://cwslbot.herokuapp.com/user/del
@@ -186,6 +299,19 @@ const users=new Schema({
 {
     "name":"admin",
 }
+```
+
+### 範例:
+
+```javascript
+axios.delete("https://cwslbot.herokuapp.com/user/del", {
+    headers: {
+        Authorization: "***" 
+    },
+    data: {
+        "name":"admin"
+    }
+}).then( (response) => console.log(response.data)).catch( (error) => console.log(error))
 ```
 
 
@@ -204,5 +330,20 @@ const users=new Schema({
         "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/215px-Vue.js_Logo_2.svg.png",
 	}
 }
+```
+
+### 範例
+
+```javascript
+axios.put('https://cwslbot.herokuapp.com/user/edit',{
+    "name":"LWR",
+    "data":{
+        "name":"CWL",
+        "pass":"123456789",
+        "img":"https://cdn.discordapp.com/attachments/639611642945994772/922061054442352640/267214691_411988757337283_8397226962135184915_n.png",
+    }
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
 ```
 
