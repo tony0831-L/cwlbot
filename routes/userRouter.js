@@ -24,8 +24,7 @@ router.get('/',(req,res)=>{
 
 router.post('/regi',(req,res)=>{
     async function regi(){
-        let num = await checkRepeat(req.body.name);
-        let message,stat;
+        let num = await checkRepeat(req.body.name),message,stat;
         if(num){
             if(num.length>=1){
                 message = "名稱重複";
@@ -46,9 +45,10 @@ router.post('/regi',(req,res)=>{
                 message:message
             })
         }else{
-            build = false
+            build = false;
             res.send({
                 num:"err",
+                build:stat,
                 message:"操作過於頻繁,請稍後在試"
             })
         }
