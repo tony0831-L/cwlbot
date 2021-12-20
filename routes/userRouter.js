@@ -63,6 +63,7 @@ router.post('/sign',(req,res)=>{
                     if (el.pass==req.body.pass) {
                         res.send({
                             stat:true,
+                            info:el,
                             message:"登入成功"
                         });
                     }else{
