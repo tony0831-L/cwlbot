@@ -107,33 +107,19 @@ router.delete('/del',(req,res)=>{
 
 router.put('/edit',(req,res)=>{
     async function edit(){
-        let stat = await checkRepeat(req.body.data.name);
-        if(stat&&stat.length){
-            res.send({
-                stat:false,
-                message:"名稱重複"
-            }); 
-        }else if(!stat){
-            res.send({
-                num:"err",
-                build:stat,
-                message:"操作過於頻繁,請稍後在試,如重複出現請通知技術人員"
-            })
-        }else{
-            userModel.users.findOneAndUpdate({name:req.body.name},req.body.data,(err,docs)=>{
-                if(!err){
-                    res.send({
-                        stat:true,
-                        message:"修改成功! 現在資料:"+docs
-                    });
-                }else{
-                    res.send({
-                        stat:false,
-                        message:"伺服器錯誤,請聯繫技術人員"
-                    }); 
-                }
-            })
-        }
+        userModel.users.findOneAndUpdate({name:req.body.name},req.body.data,(err,docs)=>{
+            if(!err){
+                res.send({
+                    stat:true,
+                    message:"修改成功! 現在資料:"+docs
+                });
+            }else{
+                res.send({
+                    stat:false,
+                    message:"伺服器錯誤,請聯繫技術人員"
+                }); 
+            }
+        })
     }
     edit();
 })
