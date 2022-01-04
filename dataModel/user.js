@@ -8,9 +8,12 @@ const users=new Schema({
 })
 
 const history = new Schema({
-    resta:String,
-    user:String,
-    dishes:Array
+    res:String,
+    consumer:String,
+    list:Array,
+    time:String,
+    star:String
 })
 
 module.exports.users =mongoose.model("users",users);
+module.exports.history =mongoose.model("history",history);

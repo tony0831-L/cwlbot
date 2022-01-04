@@ -1,6 +1,8 @@
 const express =require('express');
 const router =express.Router();
 const userModel = require('../dataModel/user')
+const dayjs = require('dayjs')
+
 
 async function checkRepeat(name){
     let num ; 
@@ -124,5 +126,36 @@ router.put('/edit',(req,res)=>{
     edit();
 })
 
+router.put('/myHistory',(req,res)=>{
+    userModel.history.find({consumer:req.body.consumer},(err,docs)=>{
+        if(!err){
+            res.send({
+                stat:true,
+                data:docs,
+                message:"查詢成功"
+            });
+        }else{
+            res.send({
+                stat:false,
+                data:"error",
+                message:"伺服器錯誤,請聯繫技術人員"
+            });
+        }
+    });
+})
+
+router.post('/trade',(req,res)=>{
+    let data = req.body
+    data.time=dayjs().format('YYYY/MM/DD-HH:mm:ss'),
+    userModel.history.create(data,err=>{
+        if(!err){
+            stat = true;
+        }else{
+            stat = false;
+        }
+    });
+    console.log(data)
+    res.end();
+})
 
 module.exports = router;
