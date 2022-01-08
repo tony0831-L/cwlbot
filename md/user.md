@@ -140,3 +140,45 @@ axios.put('https://cwslbot.herokuapp.com/user/edit',{
     .catch( (error) => console.log(error))
 ```
 
+## 查用戶訂單(put):https://cwslbot.herokuapp.com/user/myHistory
+
+```javascript
+//範例:
+{
+    "consumer":"admin"
+}
+```
+
+```javascript
+axios.put('https://cwslbot.herokuapp.com/user/myHistory',{
+    "consumer":"admin"
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
+```
+
+## 交易(post):https://cwslbot.herokuapp.com/user/trade
+
+```javascript
+//範例:
+{
+    "res":"老八食堂",
+    "consumer":"admin",
+    "list":["小漢堡"],
+    "star":"2",
+    "comment":"難吃死了"
+}
+```
+
+```javascript
+axios.post('https://cwslbot.herokuapp.com/user/sign',{
+    "res":"老八食堂",
+    "consumer":"admin",
+    "list":["小漢堡"],
+    "star":"2",
+    "comment":"難吃死了"
+})
+    .then( (response) => console.log(response))
+    .catch( (error) => console.log(error))
+```
+
