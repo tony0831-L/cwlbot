@@ -12,7 +12,8 @@ const history = new Schema({
     consumer:String,
     list:Array,
     time:String,
-    Comment:String
+    star:String,
+    comment:String
 })
 
 module.exports.users =mongoose.model("users",users);
